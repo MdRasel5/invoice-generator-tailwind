@@ -27,6 +27,8 @@
             max-width: 1024px;
             margin-left: auto;
             margin-right: auto;
+            padding-left: 15px;
+            padding-right: 15px;
         }
 
         /* responsive */
@@ -127,6 +129,105 @@
                 grid-column: span 2 / span 2;
             }
         }
+
+        @media (max-width: 575.99px) {
+            p {
+                font-size: 14px !important;
+            }
+
+            h2 {
+                font-size: 18px !important;
+            }
+
+            .rs_container {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            .bill_area_wrapper {
+                display: block !important;
+            }
+
+            .billed_to {
+                margin-bottom: 30px;
+            }
+
+            .invoice_num {
+                margin-bottom: 30px;
+            }
+
+            .invoice_num p {
+                margin-bottom: 10px;
+            }
+
+            .invoice_of {
+                text-align: start !important;
+                overflow: hidden;
+                width: 100%;
+            }
+
+            .invoice_of>p {
+                margin-bottom: 10px;
+            }
+
+            .invoice_status {
+                max-width: 182px;
+            }
+
+            .order_details_wrapper {
+                display: block !important;
+            }
+
+
+            .order_details_title {
+                margin-bottom: 30px;
+            }
+
+            .order_details_time {
+                width: 48%;
+                display: inline-block;
+            }
+
+            .order_details_time p {
+                margin-bottom: 10px;
+            }
+
+            .item_details_header {
+                display: block !important;
+            }
+
+            .item_details_header p:nth-child(1) {
+                width: 49%;
+                display: inline-block;
+            }
+
+            .item_details_header p:nth-child(2) {
+                width: 49%;
+                display: inline-block;
+            }
+
+            .item_details_body {
+                display: block !important;
+            }
+
+            .item_details_body p,
+            h2,
+            .item_details_price {
+                padding: 10px !important;
+            }
+
+            .item_details_body div:nth-child(2) {
+                border-left: 1px solid rgb(229 231 235 / var(--tw-border-opacity));
+            }
+
+            .summary_wrapper {
+                display: block !important;
+            }
+
+            .summary_wrapper button {
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -138,8 +239,10 @@
             <strong
                 class="w-[135px] block mx-auto bg-[#6600cc] text-white py-[13px] px-[40px] rounded-bl-[15px] rounded-br-[15px]">Invoice</strong>
             <div class="logo w-[120px] mx-auto mt-[40px]">
-                <img src="https://imjol.com/wp-content/uploads/elementor/thumbs/imjol-qazo2xl61gdltl225ngn8tqtnjaj2152nx6tw8a1vk.png"
-                    alt="logo">
+                <a href="">
+                    <img src="https://imjol.com/wp-content/uploads/elementor/thumbs/imjol-qazo2xl61gdltl225ngn8tqtnjaj2152nx6tw8a1vk.png"
+                        alt="logo">
+                </a>
             </div>
             <div class="company_info flex justify-between mt-[40px]">
                 <div>
@@ -214,8 +317,8 @@
                         https://masstamilan.biz/what-are-the-top-calligraphic-fonts.html
                     </p>
                 </div>
-                <div class="border-r-[1px] border-b-[1px] border-gray-200 p-5">
-                    <p>$3,000.00</p>
+                <div class="item_details_price border-r-[1px] border-b-[1px] border-gray-200 p-5">
+                    <span>$3,000.00</span>
                 </div>
             </div>
         </div>
@@ -223,7 +326,7 @@
 
     <!-- summary -->
     <div class="summary py-[25px]">
-        <div class="rs_container flex justify-between items-center">
+        <div class="rs_container summary_wrapper flex justify-between items-center">
             <button class="bg-fuchsia-200 py-2 px-4 rounded-md"> <i class="fa-solid fa-print"></i> Print/PDF</button>
             <div>
                 <div class="py-5 px-10 bg-gray-200 rounded-md">
@@ -232,14 +335,14 @@
 
                 </div>
                 <div class="mt-4">
-                    <!-- <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                         data-key="{{ config('services.stripe.key') }}" data-amount={{ (int) session('total') * 100 }}
                         data-name="Stripe" data-locale="auto" data-label="Pay With Stripe" data-zip-code="true"
                         data-currency="{{ 'USD' }}" data-gateway="stripe"></script>
                     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                         data-key="{{ config('services.stripe.key') }}" data-amount={{ (int) session('total') * 100 }}
                         data-name="Stripe" data-locale="auto" data-label="Pay With Stripe" data-zip-code="true"
-                        data-currency="{{ 'USD' }}" data-gateway="stripe"></script> -->
+                        data-currency="{{ 'USD' }}" data-gateway="stripe"></script>
                 </div>
             </div>
         </div>
