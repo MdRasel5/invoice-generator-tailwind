@@ -8,97 +8,144 @@
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/7cad351999.js" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .rs_container {
+            max-width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- EDDFF9 -->
+
     <!-- header-area -->
-    <header>
-        <strong>Invoice</strong>
-        <div class="logo">
-            <img src="https://imjol.com/wp-content/uploads/elementor/thumbs/imjol-qazo2xl61gdltl225ngn8tqtnjaj2152nx6tw8a1vk.png"
-                alt="logo">
-        </div>
-        <div class="company_info">
-            <div>
-                <p>01558-498856</p>
-                <p>info@imjol.com</p>
-                <p>www.imjol.com</p>
+    <header class="bg-[#EDDFF9] pb-[50px]">
+        <div class="rs_container">
+            <strong
+                class="w-[135px] block mx-auto bg-[#6600cc] text-white py-[13px] px-[40px] rounded-bl-[15px] rounded-br-[15px]">Invoice</strong>
+            <div class="logo w-[120px] mx-auto mt-[40px]">
+                <img src="https://imjol.com/wp-content/uploads/elementor/thumbs/imjol-qazo2xl61gdltl225ngn8tqtnjaj2152nx6tw8a1vk.png"
+                    alt="logo">
             </div>
-            <div>
-                <p>Mirpur, Sector 13</p>
-                <p>1250, Dhaka</p>
-                <p>Bangladesh</p>
+            <div class="company_info flex justify-between mt-[40px]">
+                <div>
+                    <p class="mb-[10px]">01558-498856</p>
+                    <p class="mb-[10px]">info@imjol.com</p>
+                    <p>www.imjol.com</p>
+                </div>
+                <div>
+                    <p class="mb-[10px]">Mirpur, Sector 13</p>
+                    <p class="mb-[10px]">1250, Dhaka</p>
+                    <p>Bangladesh</p>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- bill-area -->
-    <div class="bill_area">
-        <div class="billed_to">
-            <p>Billed to,</p>
-            <h2>Sakib Al Hasan</h2>
-            <p>Mirpur, Sector 13</p>
-            <p>1250, Dhaka</p>
-            <p>Bangladesh</p>
-        </div>
-        <div class="invoice_num">
-            <p>Invoice Number</p>
-            <h2>#00261</h2>
-        </div>
-        <div class="invoice_of">
-            <p>Invoice of <span>(USD)</span></p>
-            <h2>$12,000.00</h2>
+    <div class="bill_area py-[50px]">
+        <div class="rs_container flex justify-between">
+            <div class="billed_to">
+                <p class="bg-gray-200 text-[#6600cc] py-[4px] px-[8px] inline-block rounded-md mb-4">Billed to,</p>
+                <h2 class="text-xl font-bold mb-4">Sakib Al Hasan</h2>
+                <p class="mb-1">Mirpur, Sector 13</p>
+                <p class="mb-1">1250, Dhaka</p>
+                <p>Bangladesh</p>
+            </div>
+            <div class="invoice_num">
+                <p class="text-gray-500 mb-4">Invoice Number</p>
+                <h2 class="text-xl font-bold mb-4">#00261</h2>
+            </div>
+            <div class="invoice_of text-end">
+                <p class="text-gray-500 mb-4">Invoice of <span>(USD)</span></p>
+                <h2 class="text-[#6633cc] text-xl font-bold mb-4">$12,000.00</h2>
+                <div class="border-[1px] border-gray-500 rounded-md px-4 py-2 flex items-center gap-2">
+                    <p class="text-[14px] leading-4">Invioce <br> Status</p>
+                    <div>
+                        <p class="paid hidden bg-lime-600 py-1 px-4 text-white rounded-md">Paid</p>
+                        <p class="unpaid  bg-orange-500 py-1 px-4 text-white rounded-md">Unpaid</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- order-details -->
-    <div class="order_details">
-        <h2>Order Details</h2>
-        <div>
-            <p>Invoice Date</p>
-            <h2>29 August 2023</h2>
-        </div>
-        <div>
-            <p>Due Date</p>
-            <h2>15 September 2023</h2>
+    <div class="order_details py-[50px]">
+        <div class="rs_container">
+            <h2>Order Details</h2>
+            <div>
+                <p>Invoice Date</p>
+                <h2>29 August 2023</h2>
+            </div>
+            <div>
+                <p>Due Date</p>
+                <h2>15 September 2023</h2>
+            </div>
         </div>
     </div>
 
     <!-- item-details -->
-    <div class="item_details">
-        <div class="item_details_header">
-            <p>Item Details</p>
-            <p>Amount</p>
-        </div>
-        <div class="item_details_body">
-            <div>
-                <h2>Guest Posting on masstamilan</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quidem corporis saepe neque
-                    doloribus repellendus eum? Assumenda vitae, sint doloribus aliquid molestias possimus dicta ullam,
-                    illum aperiam voluptatum placeat accusantium.</p>
+    <div class="item_details py-[50px]">
+        <div class="rs_container">
+            <div class="item_details_header">
+                <p>Item Details</p>
+                <p>Amount</p>
             </div>
-            <div>
-                <p>$3,000.00</p>
+            <div class="item_details_body">
+                <div>
+                    <h2>Guest Posting on masstamilan</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quidem corporis saepe neque
+                        doloribus repellendus eum? Assumenda vitae, sint doloribus aliquid molestias possimus dicta
+                        ullam,
+                        illum aperiam voluptatum placeat accusantium.</p>
+                </div>
+                <div>
+                    <p>$3,000.00</p>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- summary -->
-    <div class="summary">
-        <button> <i class="fa-solid fa-print"></i> Print/PDF</button>
-        <div>
-            <span>Total</span>
-            <strong>$12,000.00</strong>
+    <div class="summary py-[50px]">
+        <div class="rs_container">
+            <button> <i class="fa-solid fa-print"></i> Print/PDF</button>
+            <div>
+                <span>Total</span>
+                <strong>$12,000.00</strong>
+            </div>
         </div>
     </div>
 
-    <footer>
-        <strong>Terms & Conditions</strong>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus voluptas, earum sint neque aperiam
-            ratione! Temporibus illum excepturi iusto numquam reprehenderit. Id, saepe? Vel deleniti iste mollitia
-            repellendus facere consectetur.</p>
+    <footer class="mt-[100px] pb-50px">
+        <div class="rs_container">
+            <strong>Terms & Conditions</strong>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus voluptas, earum sint neque aperiam
+                ratione! Temporibus illum excepturi iusto numquam reprehenderit. Id, saepe? Vel deleniti iste mollitia
+                repellendus facere consectetur.</p>
+        </div>
     </footer>
+
+    <!-- <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="{{ config('services.stripe.key') }}" data-amount={{ (int) session('total') * 100 }} data-name="Stripe"
+        data-locale="auto" data-label="Pay With Stripe" data-zip-code="true" data-currency="{{ 'USD' }}"
+        data-gateway="stripe"></script> -->
 </body>
 
 </html>
