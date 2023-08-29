@@ -124,28 +124,39 @@
 
     <!-- summary -->
     <div class="summary py-[25px]">
-        <div class="rs_container">
-            <button> <i class="fa-solid fa-print"></i> Print/PDF</button>
+        <div class="rs_container flex justify-between items-center">
+            <button class="bg-fuchsia-200 py-2 px-4 rounded-md"> <i class="fa-solid fa-print"></i> Print/PDF</button>
             <div>
-                <span>Total</span>
-                <strong>$12,000.00</strong>
+                <div class="py-5 px-10 bg-gray-200 rounded-md">
+                    <span class="inline-block mr-10 text-gray-700 font-[500]">Total</span>
+                    <strong class="text-lg">$12,000.00</strong>
+
+                </div>
+                <div class="mt-4">
+                    <!-- <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="{{ config('services.stripe.key') }}" data-amount={{ (int) session('total') * 100 }}
+                        data-name="Stripe" data-locale="auto" data-label="Pay With Stripe" data-zip-code="true"
+                        data-currency="{{ 'USD' }}" data-gateway="stripe"></script>
+                    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="{{ config('services.stripe.key') }}" data-amount={{ (int) session('total') * 100 }}
+                        data-name="Stripe" data-locale="auto" data-label="Pay With Stripe" data-zip-code="true"
+                        data-currency="{{ 'USD' }}" data-gateway="stripe"></script> -->
+                </div>
             </div>
         </div>
     </div>
 
-    <footer class="mt-[100px] pb-50px">
+    <footer class="mb-[60px] pt-[50px]">
         <div class="rs_container">
-            <strong>Terms & Conditions</strong>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus voluptas, earum sint neque aperiam
-                ratione! Temporibus illum excepturi iusto numquam reprehenderit. Id, saepe? Vel deleniti iste mollitia
-                repellendus facere consectetur.</p>
+            <p class="font-[500] mb-3">Terms & Conditions</p>
+            <p>By using our e-commerce platform, you agree to our user responsibilities, product accuracy, payment,
+                shipping, privacy,
+                and liability terms. Thank you for shopping with us.
+            </p>
         </div>
     </footer>
 
-    <!-- <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-        data-key="{{ config('services.stripe.key') }}" data-amount={{ (int) session('total') * 100 }} data-name="Stripe"
-        data-locale="auto" data-label="Pay With Stripe" data-zip-code="true" data-currency="{{ 'USD' }}"
-        data-gateway="stripe"></script> -->
+
 </body>
 
 </html>
